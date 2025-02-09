@@ -3,6 +3,7 @@ import Alert from './components/Alert'
 import Button from './components/Button';
 import { useState } from 'react';
 import Like from './components/Like/Like';
+import Message from './components/Message';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   {alertVisible && <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>}
   <Button onClick={()=> setAlertVisibility(true)}>My Button</Button> <br /><br />
   <Like onClick={() => console.log("Heart button was clicked")}/>
+  <Message/><Message/><Message/>
   </>
 )
 }

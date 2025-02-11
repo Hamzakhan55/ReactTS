@@ -7,9 +7,11 @@ import Message from './components/Message';
 import Nav from './components/NavCartConnet.ysx/Nav';
 import Cart from './components/NavCartConnet.ysx/Cart';
 import Form from './components/Form/Form';
-import ExpenseList from './Mini-P-Expense-Tracker/ExpenseList';
+import ExpenseList from './Mini-P-Expense-Tracker/components/ExpenseList';
 import ExpenseFilter from './Mini-P-Expense-Tracker/components/ExpenseFilter';
+import ExpenseForm from './Mini-P-Expense-Tracker/components/ExpenseForm';
 
+export const categories = ["Utilities","Entertainment","Groceries"];
 
 function App() {
 
@@ -39,6 +41,9 @@ const visibleExpenses = selectedCategory ? expenses.filter(e => e.category === s
   <Cart cartItems={cartItems} onClear={() => setCartItems([])}/>
     <br /><br /><br />
     <Form/>
+    <div className="mb-5">
+      <ExpenseForm/>
+    </div>
     <div className = "mb-3">
     <ExpenseFilter onSelectCategory ={(category) => setSelectedCategory(category)}/> 
     </div>

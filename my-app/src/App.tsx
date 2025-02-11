@@ -11,8 +11,6 @@ import ExpenseList from './Mini-P-Expense-Tracker/components/ExpenseList';
 import ExpenseFilter from './Mini-P-Expense-Tracker/components/ExpenseFilter';
 import ExpenseForm from './Mini-P-Expense-Tracker/components/ExpenseForm';
 
-export const categories = ["Utilities","Entertainment","Groceries"];
-
 function App() {
 
   const [selectedCategory, setSelectedCategory] = useState('');

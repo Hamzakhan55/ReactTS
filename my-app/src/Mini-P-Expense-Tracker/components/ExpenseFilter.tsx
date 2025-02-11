@@ -1,5 +1,4 @@
-import { categories } from "../../App";
-
+import categories from "../categories";
 
 interface Props {
     onSelectCategory: (category: string) => void;
@@ -13,4 +12,4 @@ const ExpenseFilter = ({onSelectCategory}: Props) => {
 )
 }
 
-export default ExpenseFilter
+export default ExpenseFilter;

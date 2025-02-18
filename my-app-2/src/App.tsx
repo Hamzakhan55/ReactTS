@@ -61,7 +61,11 @@ const deleteUser = (user: User) => {
     <ul className = "list-group">
       {users.map(user => <li key={user.id} className = "list-group-item d-flex justify-content-between">
         {user.name}{" "} 
-      <button className="btn btn-outline-danger" onClick = {() => deleteUser(user)}>Delete</button></li>)}
+        <div>
+          <button className="btn btn-outline-secondary">Update</button>
+          <button className="btn btn-outline-danger" onClick = {() => deleteUser(user)}>Delete</button>
+      </div>
+      </li>)}
      </ul>
     </>
   )

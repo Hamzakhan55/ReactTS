@@ -2,6 +2,7 @@ import axios, { CanceledError } from 'axios'
 import { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import TodoList from './components/TodoList';
+import Post from './components/Post';
 
 
 interface User {
@@ -82,6 +83,7 @@ const App = () => {
       </li>)}
     </ul>
     <TodoList />
+    <Post />
   </>
   )
 }

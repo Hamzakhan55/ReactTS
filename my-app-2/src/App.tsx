@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import TodoList from './components/TodoList';
 import Post from './components/Post';
+import TodoForm from './components/TodoForm';
 
 
 interface User {
@@ -82,6 +83,9 @@ const App = () => {
         </div>
       </li>)}
     </ul>
+    <br />
+    <br />
+    <TodoForm />
     <TodoList />
     <Post />
   </>

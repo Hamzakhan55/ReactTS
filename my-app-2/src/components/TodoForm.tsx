@@ -14,6 +14,7 @@ const TodoForm = () => {
         onSuccess: (savedTodo, newTodo) => {
             console.log(savedTodo)
             queryClient.setQueryData<Todo[]>(['todos'], (todos: Todo[] = []) => [savedTodo, ...todos])
+            if (ref.current) ref.current.value = '';
         }
     });
 
@@ -40,7 +41,11 @@ const TodoForm = () => {
                     <input ref={ref} type="text" className="form-control" />
                 </div>
                 <div className="col">
-                    <button className="btn btn-primary">Add</button>
+                    <button
+                        disabled={addTodo.status === 'pending'}
+                        className="btn btn-primary">
+                        {addTodo.status === 'pending' ? 'Adding...' : 'Add'}
+                    </button>
                 </div>
             </form>
         </>
